@@ -29,4 +29,14 @@ public class ToDoList {
 	public void changeTask(int index, String task) {
 		toDoList.set(index, task);
 	}
+	
+	// удалить задачу
+	public void removeTask(String task) {
+		toDoList.remove(task);	
+	}
+	
+	// получить индекс задачи
+	public int getTaskPriority(String task) {
+		return toDoList.indexOf(task);
+	}
 }
