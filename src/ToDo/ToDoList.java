@@ -20,7 +20,7 @@ public class ToDoList {
 	// распечатать список задач
 	public void printToDoList() {
 		for (int i = 0; i < toDoList.size(); i++) {
-			System.out.println(i + " - " + toDoList.get(i));
+			System.out.println("Задача " + i + " - " + toDoList.get(i));
 
 		}
 	}
