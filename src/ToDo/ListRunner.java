@@ -57,10 +57,12 @@ public class ListRunner {
 				break;
 			case 6:
 				System.out.println("Введите номер позиции в которую нужно добавить задачу !");
-				int index = scanner.nextInt();
-				System.out.println("Введите название задачу!");
+				scanner.nextLine();
+				int position = scanner.nextInt();
+				System.out.println("Введите название задачи!");
+				scanner.nextLine();
 				String task6 = scanner.nextLine();
-				list.addListAtPosition(index, task6);
+				list.addListAtPosition(position, task6);
 				System.out.println("Задача добавлена!");
 				System.out.println("Пожалуйста, выберите команду от 0-6!");
 				param = scanner.nextInt();
@@ -76,10 +78,14 @@ public class ListRunner {
 	}
 
 	public static void printOut() {
-		System.out.println("Пожалуйста выберите команду. Нажмите :\n" + "1 - добавить новую задачу в список \n"
-				+ "2 - распечатать список задач \n" + "3 - изменить задачу в списке \n"
-				+ "4 - удалить задачу со списка \n" + "5 - для получения позиции задачи в списке\n"
-				+ "6 - добавить задачу в определенную позицию в списке\n" + "нажмите 0 - для выхода\n\n"
+		System.out.println("Пожалуйста выберите команду. Нажмите :\n" 
+				+ "1 - добавить новую задачу в список \n"
+				+ "2 - распечатать список задач \n" 
+				+ "3 - изменить задачу в списке \n"
+				+ "4 - удалить задачу со списка \n" 
+				+ "5 - для получения позиции задачи в списке\n"
+				+ "6 - добавить задачу в определенную позицию в списке\n" 
+				+ "нажмите 0 - для выхода\n\n"
 				+ "ПОСЛЕ ВЫБОРА НАЖМИТЕ - 'ENTER'\n");
 	}
 }

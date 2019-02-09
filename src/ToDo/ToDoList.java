@@ -14,7 +14,11 @@ public class ToDoList {
 
 	// добавить задачу в конкретную позицию
 	public void addListAtPosition(int position, String task) {
-		toDoList.add(position, task);
+		if (position > toDoList.size() || position < 0) {
+			toDoList.add(toDoList.size(), task);
+		} else {
+			toDoList.add(position, task);
+		}
 	}
 
 	// распечатать список задач
@@ -24,17 +28,17 @@ public class ToDoList {
 
 		}
 	}
-	
+
 	// изменить задачу
 	public void changeTask(int index, String task) {
 		toDoList.set(index, task);
 	}
-	
+
 	// удалить задачу
 	public void removeTask(String task) {
-		toDoList.remove(task);	
+		toDoList.remove(task);
 	}
-	
+
 	// получить индекс задачи
 	public int getTaskPriority(String task) {
 		return toDoList.indexOf(task);
